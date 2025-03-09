@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Github, Heart, Linkedin, Youtube, Twitter, Instagram } from "lucide-react";
+import { Github, Heart, Linkedin, Youtube, Twitter, Instagram, ArrowUp} from "lucide-react";
 
 const mainLinks = [
   {
@@ -72,7 +72,7 @@ export const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition duration-300"
               >
-                <Youtube className="h-6 w-6" />
+                <Youtube className="h-7 w-7" />
                 <span className="sr-only">YouTube</span>
               </Link>
               <Link
@@ -81,7 +81,7 @@ export const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition duration-300"
               >
-                <Twitter className="h-6 w-6" />
+                <Twitter className="h-7 w-7" />
                 <span className="sr-only">Twitter</span>
               </Link>
               <Link
@@ -90,7 +90,7 @@ export const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition duration-300"
               >
-                <Instagram className="h-6 w-6" />
+                <Instagram className="h-7 w-7" />
                 <span className="sr-only">Instagram</span>
               </Link>
             </div>
@@ -137,6 +137,12 @@ export const Footer = () => {
           </p>
           <p className="mt-2 text-lg">© {new Date().getFullYear()} HacktivSpace. All rights reserved.</p>
         </motion.div>
+        {/* Back to Top Button */}
+        <div className="fixed bottom-4 right-4">
+          <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="p-2 bg-gray-700 rounded-full hover:bg-gray-600">
+            <ArrowUp className="h-5 w-5 text-white" />
+          </button>
+        </div>
       </div>
     </footer>
   );
