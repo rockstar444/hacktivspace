@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Github, Heart, Linkedin } from "lucide-react";
+import { Github, Heart, Linkedin, Youtube, Twitter, Instagram } from "lucide-react";
 
 const mainLinks = [
   {
@@ -43,20 +43,58 @@ export const Footer = () => {
           >
             <h3 className="text-xl font-semibold tracking-wide">HacktivSpace</h3>
             <p className="text-md text-gray-400">
-              Building the future with AI, Blockchain, and <p className="text-md text-gray-400">next-gen networks.</p>
+              Building the future with AI, Blockchain, and <span className="block">next-gen networks.</span>
             </p>
-            <div className="flex justify-center md:justify-start">
+            
+            {/* Social Media Links */}
+            <div className="flex justify-center md:justify-start space-x-4">
               <Link
                 href="https://www.linkedin.com/company/hacktivspace"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition duration-300"
+                className="inline-flex items-center justify-center p-1 rounded-lg bg-gray-700 hover:bg-gray-600 transition duration-300"
               >
                 <Linkedin className="h-6 w-6" />
-                <span className="sr-only">Linkedin</span>
+                <span className="sr-only">LinkedIn</span>
+              </Link>
+              <Link
+                href="https://github.com/HacktivSpace"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition duration-300"
+              >
+                <Github className="h-7 w-7" />
+                <span className="sr-only">GitHub</span>
+              </Link>
+              <Link
+                href="https://www.youtube.com/@HacktivSpace"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition duration-300"
+              >
+                <Youtube className="h-6 w-6" />
+                <span className="sr-only">YouTube</span>
+              </Link>
+              <Link
+                href="https://twitter.com/HacktivSpace"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition duration-300"
+              >
+                <Twitter className="h-6 w-6" />
+                <span className="sr-only">Twitter</span>
+              </Link>
+              <Link
+                href="https://instagram.com/HacktivSpace"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition duration-300"
+              >
+                <Instagram className="h-6 w-6" />
+                <span className="sr-only">Instagram</span>
               </Link>
             </div>
-            
+
           </motion.div>
 
           {/* Middle and Right Section */}
